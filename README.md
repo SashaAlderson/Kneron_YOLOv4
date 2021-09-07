@@ -8,8 +8,12 @@ After convertation model's accuracy significantly drops due to quantization. We 
 | Yolov4 preprocessing           | 0.149                  | 0.339              |
 | Yolov3 preprocessing           | 0.169                  | 0.39               |
 
-|              model             | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720   |
+You can see difference between our model and suggested one in the table below. Fps calculated without postprocessing on the host side
+|              model             | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720  |
 | :--------------------------:   | :--------------------: | :----------------: |:----------------: |
-| Scaled-YOLOv4-CSP-leaky(ours)  | 0.149                  | 0.339              | 9.8               |
-|      pjreddie's YOLOv3         | 0.169                  | 0.39               | 8.7               |
+| Scaled-YOLOv4-CSP-leaky(ours)  | 0.431                  | 0.616              | 9.8               |
+|      pjreddie's YOLOv3         | 0.31                   | 0.553              | 8.7               |
+
+
+
 
