@@ -10,16 +10,15 @@ You can see difference between our model and suggested one in the table below. F
 |      pjreddie's YOLOv3-416         | 0.31                   | 0.553              | 8.7               |
 
 ## Convertation to nef
-After convertation model's accuracy significantly drops due to quantization. We tried to use different preprocessing and this is what we got:
-| YOLOv4-csp-leaky-448 nef(int8) | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |
+Model's accuracy after convertation and quantization significantly drops due to quantization. Different preprocessing pipelines yields slightly different model performance. Our Scaled-YOLOv4-CSP-leaky-448 converted to nef(int8) format is given in the table.
+| our model                      | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |
 | :--------------------------:   | :--------------------: | :----------------: |
 | YOLOv4 preprocessing           | 0.149                  | 0.339              |
 | YOLOv3 preprocessing           | 0.169                  | 0.39               |
 
 YOLOv4 preprocessing is slightly changed preprocessing function from Scaled-YOLOv4 repository. We changed dynamic resolution to fixed, because nef model can take only fixed input size. Also padding from both biggest sides was removed. 
 YOLOv3 preprocessing we took from: https://github.com/qqwweee/keras-yolo3
-## Conclusion
-Unfortunatelly as for now we can not use our custom model on Kneron, when converation does irreversible damage to it. 
+
 
 
 
