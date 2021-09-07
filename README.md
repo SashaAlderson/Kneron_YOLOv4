@@ -4,10 +4,10 @@ Kneron doesn't support a lot of operations and new activation functions as mish,
 Scaled-YOLOv4 repository: https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-csp
 
 You can see difference between our model and suggested one in the table below. Fps calculated without postprocessing on the host side.
-|              model             | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720  |
-| :--------------------------:   | :--------------------: | :----------------: |:----------------: |
-| Scaled-YOLOv4-CSP-leaky(ours)  | 0.431                  | 0.616              | 9.8               |
-|      pjreddie's YOLOv3         | 0.31                   | 0.553              | 8.7               |
+|                model               | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720  |
+| :------------------------------:   | :--------------------: | :----------------: |:----------------: |
+| Scaled-YOLOv4-CSP-leaky-448(ours)  | 0.431                  | 0.616              | 9.8               |
+|      pjreddie's YOLOv3-416         | 0.31                   | 0.553              | 8.7               |
 
 ## Convertation to nef
 After convertation model's accuracy significantly drops due to quantization. We tried to use different preprocessing and this is what we got:
