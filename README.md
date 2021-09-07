@@ -19,6 +19,9 @@ Model's accuracy after convertation and quantization significantly drops due to 
 YOLOv4 preprocessing is slightly changed preprocessing function from Scaled-YOLOv4 repository. We changed dynamic resolution to fixed, because nef model can take only fixed input size. Also padding from both biggest sides was removed. 
 YOLOv3 preprocessing we took from: https://github.com/qqwweee/keras-yolo3
 
+## Conclusion
+Convertation to nef decreased mAP50 on 36.7% and showed that our model not supposed to be used in int8 quantization due to differences between Darknet(YOLOv3) and CSP-Darknet53(YOLOv4) backbones. YOLOv3 preprocessing showed to be better option for our Kneron model. 
+
 
 
 
