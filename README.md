@@ -4,17 +4,17 @@ Kneron doesn't support a lot of operations and new activation functions as mish,
 Scaled-YOLOv4 repository: https://github.com/WongKinYiu/ScaledYOLOv4/tree/yolov4-csp
 
 You can see difference between our model and suggested one in the table below. Fps calculated without postprocessing on the host side.
-|                model               | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720  |
+|                model               | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |   FPS on KL-720   |
 | :------------------------------:   | :--------------------: | :----------------: |:----------------: |
-| Scaled-YOLOv4-CSP-leaky-448(ours)  | 0.434                  | 0.615              | 9.8               |
-|      pjreddie's YOLOv3-416         | 0.31                   | 0.553              | 8.7               |
+| Scaled-YOLOv4-CSP-leaky-448(ours)  | 0.432                  | 0.615              | 10.08             |
+|      pjreddie's YOLOv3-416         | 0.31                   | 0.553              | 10.01             |
 
 ## Convertation to nef
 Model's accuracy after convertation and quantization significantly drops due to quantization. Different preprocessing pipelines yields slightly different model performance. Our Scaled-YOLOv4-CSP-leaky-448 converted to nef(int8) format is given in the table.
 | our model                      | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |
 | :--------------------------:   | :--------------------: | :----------------: |
-| YOLOv4 preprocessing           | 0.149                  | 0.339              |
-| YOLOv3 preprocessing           | 0.169                  | 0.39               |
+| YOLOv3-416                  | 0.252                     |     0.489          |
+| YOLOv4-scaled-448           | 0.395                     |     0.577          |
 
 YOLOv4 preprocessing is slightly changed preprocessing function from Scaled-YOLOv4 repository. We changed dynamic resolution to fixed, because nef model can take only fixed input size. Also padding from both biggest sides was removed. 
 YOLOv3 preprocessing we took from: https://github.com/qqwweee/keras-yolo3
