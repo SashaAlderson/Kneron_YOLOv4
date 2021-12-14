@@ -14,7 +14,7 @@ Model's accuracy after convertation and quantization slightly drops due to quant
 | our model                   | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |
 | :-----------------------:   | :--------------------: | :----------------: |
 | YOLOv3-416                  | 0.252                  |     0.489          |
-| YOLOv4-scaled-448           | 0.395                  |     0.577          |
+| Scaled-YOLOv4-CSP-leaky-448          | 0.395                  |     0.577          |
 
 
 ## Conclusion
