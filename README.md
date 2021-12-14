@@ -10,7 +10,7 @@ You can see difference between our model and suggested one in the table below. F
 |      pjreddie's YOLOv3-416         | 0.31                   | 0.553              | 10.01             |
 
 ## Convertation to nef
-Model's accuracy after convertation and quantization slightly drops due to quantization. 
+Model's accuracy after convertation and quantization slightly drops due to quantization. YOLOv3 showed here is the model that was converted in previous example https://github.com/SashaAlderson/Kneron_yolov3_inference.
 | our model                   | mAP @<br>IoU=0.5:0.95  |  mAP @<br>IoU=0.5  |
 | :-----------------------:   | :--------------------: | :----------------: |
 | YOLOv3-416                  | 0.252                  |     0.489          |
@@ -18,7 +18,7 @@ Model's accuracy after convertation and quantization slightly drops due to quant
 
 
 ## Conclusion
-Yolov4-scaled is more optimal choise for Kneron KL-720 than YOLOv3. Also we used 500 images for quantization instead of suggested 10 in example, so our model losed significantly less accuracy(≈9%) comparing with YOLOv3(≈19%).
+YOLOv4 is more optimal choise for Kneron KL-720 than YOLOv3. Also we used 500 images for quantization instead of suggested 10 in example, so our model losed significantly less accuracy(≈9%) comparing with YOLOv3(≈19%).
 
 
 
