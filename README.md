@@ -18,7 +18,7 @@ Model's accuracy after convertation and quantization slightly drops due to quant
 
 
 ## Conclusion
-YOLOv4 is more optimal choise for Kneron KL-720 than YOLOv3. Also we used 500 images for quantization instead of suggested 10 in example, so our model losed significantly less accuracy(≈9%) comparing with YOLOv3(≈19%).
+YOLOv4 is more optimal choise for Kneron KL-720 than YOLOv3. Also we used 500 images for quantization instead of suggested 10 in example, so our model loses significantly less accuracy(≈9%) comparing with YOLOv3(≈19%).
 
 
 
